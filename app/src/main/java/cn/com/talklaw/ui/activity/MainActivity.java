@@ -1,10 +1,9 @@
 package cn.com.talklaw.ui.activity;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
-import com.jusfoun.baselibrary.base.BaseModel;
 import com.jusfoun.baselibrary.net.Api;
 
 import java.util.HashMap;
@@ -18,7 +17,9 @@ import rx.functions.Action1;
 
 public class MainActivity extends BaseTalkLawActivity {
 
+    protected Button login;
     private TextView txt;
+
     @Override
     public int getLayoutResId() {
         return R.layout.activity_main;
@@ -31,12 +32,13 @@ public class MainActivity extends BaseTalkLawActivity {
 
     @Override
     public void initView() {
-        txt=findViewById(R.id.txt);
+        txt = findViewById(R.id.txt);
+        login = (Button) findViewById(R.id.login);
     }
 
     @Override
     public void initAction() {
-        Map<String,String> params=new HashMap<>();
+        Map<String, String> params = new HashMap<>();
         addNetwork(Api.getInstance().getService(ApiService.class).getMove(params)
                 , new Action1<MoveModel>() {
                     @Override
@@ -49,5 +51,12 @@ public class MainActivity extends BaseTalkLawActivity {
                         txt.setText(throwable.getMessage());
                     }
                 });
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goActivity(null,LoginActivity.class);
+            }
+        });
     }
 }

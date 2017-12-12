@@ -13,4 +13,12 @@
             android:layout_height="50dp"
             />
     </com.jusfoun.baselibrary.widget.TitleStatusBarView>
+
+
+    <Button
+        android:id="@+id/login"
+        android:text="登录"
+        android:layout_marginTop="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </FrameLayout>
