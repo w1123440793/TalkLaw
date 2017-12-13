@@ -22,6 +22,7 @@
         </activity>
 
         <activity android:name=".ui.activity.LoginActivity" />
+        <activity android:name=".ui.activity.AudioDetailsActivity" />
     </application>
 
 </manifest>

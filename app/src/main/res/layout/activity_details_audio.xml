@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#1c1d1a">
+
+    <TextView
+        android:id="@+id/lawyer_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="王律师"
+        android:textColor="#fff"
+        android:layout_marginTop="30dp"
+        android:textSize="18dp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/back"
+        android:scaleType="center"
+        app:layout_constraintTop_toTopOf="@+id/lawyer_name"
+        app:layout_constraintBottom_toBottomOf="@+id/lawyer_name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:paddingLeft="16dp"
+        android:src="@mipmap/icon_audio_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/share"
+        android:scaleType="center"
+        app:layout_constraintTop_toTopOf="@+id/lawyer_name"
+        app:layout_constraintBottom_toBottomOf="@+id/lawyer_name"
+        app:layout_constraintRight_toRightOf="parent"
+        android:paddingLeft="16dp"
+        android:src="@mipmap/icon_audio_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/theme"
+        app:layout_constraintTop_toBottomOf="@+id/lawyer_name"
+        android:src="@mipmap/icon_audio_theme"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="55dp"
+        android:layout_width="185dp"
+        android:layout_height="185dp" />
+
+    <TextView
+        android:id="@+id/theme_des"
+        android:text="没有提前辞职，公司要违约金合法吗？"
+        android:gravity="center"
+        android:textSize="15dp"
+        android:textColor="#fff"
+        app:layout_constraintTop_toBottomOf="@+id/theme"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="28dp"
+        android:layout_width="185dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/theme_des"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="24dp"
+        android:textColor="#fff"
+        android:layout_marginTop="59dp"
+        android:text="02:02"
+        android:textSize="12dp"
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/theme_des"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="24dp"
+        android:textColor="#fff"
+        android:layout_marginTop="59dp"
+        android:text="02:02"
+        android:textSize="12dp"
+        android:id="@+id/time_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <SeekBar
+        android:id="@+id/seek"
+        android:progressDrawable="@drawable/bg_audio_progress"
+        android:thumb="@mipmap/icon_audio_progress"
+        app:layout_constraintLeft_toRightOf="@+id/time"
+        app:layout_constraintRight_toLeftOf="@+id/time_all"
+        app:layout_constraintTop_toTopOf="@+id/time_all"
+        app:layout_constraintBottom_toBottomOf="@+id/time_all"
+        android:maxHeight="2dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/play"
+        app:layout_constraintTop_toBottomOf="@+id/seek"
+        android:layout_marginTop="45dp"
+        android:src="@mipmap/icon_audio_player"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/last"
+        android:src="@mipmap/icon_audio_last"
+        app:layout_constraintTop_toTopOf="@+id/play"
+        app:layout_constraintBottom_toBottomOf="@+id/play"
+        app:layout_constraintRight_toLeftOf="@+id/play"
+        android:layout_marginRight="49dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/rewind"
+        android:src="@mipmap/icon_audio_forward"
+        app:layout_constraintTop_toTopOf="@+id/play"
+        app:layout_constraintBottom_toBottomOf="@+id/play"
+        app:layout_constraintRight_toLeftOf="@+id/last"
+        android:layout_marginRight="59dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/next"
+        android:src="@mipmap/icon_audio_next"
+        app:layout_constraintTop_toTopOf="@+id/play"
+        app:layout_constraintBottom_toBottomOf="@+id/play"
+        app:layout_constraintLeft_toRightOf="@+id/play"
+        android:layout_marginLeft="49dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/forward"
+        android:src="@mipmap/icon_audio_forward"
+        app:layout_constraintTop_toTopOf="@+id/play"
+        app:layout_constraintBottom_toBottomOf="@+id/play"
+        app:layout_constraintLeft_toRightOf="@+id/next"
+        android:layout_marginLeft="59dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/download"
+        android:src="@mipmap/icon_audio_download"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/like"
+        android:src="@mipmap/icon_audio_like"
+        app:layout_constraintBottom_toBottomOf="@+id/download"
+        app:layout_constraintRight_toLeftOf="@+id/download"
+        android:layout_marginRight="86dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/comment"
+        android:src="@mipmap/icon_audio_comment"
+        app:layout_constraintBottom_toBottomOf="@+id/download"
+        app:layout_constraintLeft_toRightOf="@+id/download"
+        android:layout_marginLeft="86dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</android.support.constraint.ConstraintLayout>
