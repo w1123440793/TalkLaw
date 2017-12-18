@@ -48,11 +48,11 @@ public class HeaderInterceptor implements Interceptor {
     public Response intercept(Chain chain) throws IOException {
         Request request = chain.request().newBuilder()
                 /**********添加头文件**********/
-                .addHeader(Version, AppUtil.getVersionName(mContext))
-                .addHeader(VersionCode, AppUtil.getVersionCode(mContext) + "")
-                .addHeader(AppType, "0")
-//                .addHeader(Channel, AppUtil.getChannelName(mContext))
-                .addHeader(Deviceid, PhoneUtil.getIMEI(mContext))
+//                .addHeader(Version, AppUtil.getVersionName(mContext))
+//                .addHeader(VersionCode, AppUtil.getVersionCode(mContext) + "")
+//                .addHeader(AppType, "0")
+////                .addHeader(Channel, AppUtil.getChannelName(mContext))
+//                .addHeader(Deviceid, PhoneUtil.getIMEI(mContext))
                 .addHeader(APIVersion, "1.0")
                 .build();
         String requestContent = bodyToString(request);
